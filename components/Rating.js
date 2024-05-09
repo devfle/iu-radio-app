@@ -6,7 +6,7 @@ function Rating(props) {
   const [rateIndex, setRateIndex] = React.useState(0);
   const handlePress = (rateIndex) => {
     setRateIndex(rateIndex);
-    props?.onPress();
+    props?.onPress({ value: rateIndex, scope: props.scope });
   };
   return (
     <>
