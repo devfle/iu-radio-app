@@ -1,0 +1,20 @@
+[
+  {
+    "singer": "Luna and the Dreamers",
+    "title": "Echoes in the Rain",
+    "albumName": "Melancholic Melodies",
+    "img": "https://images.unsplash.com/photo-1517230878791-4d28214057c2?q=80&w=3869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "singer": "Azure Blue Horizon",
+    "title": "Whispers of Forgetfulness",
+    "albumName": "Summer Breeze Serenade",
+    "img": "https://images.unsplash.com/photo-1593697821252-0c9137d9fc45?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "singer": "Crystal Clear Harmony",
+    "title": "Night Lights on the Horizon",
+    "albumName": "City Lights and Stardust",
+    "img": "https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  }
+]
