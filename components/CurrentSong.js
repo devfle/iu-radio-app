@@ -1,10 +1,16 @@
 import React from 'react';
 import { View, StyleSheet, Image, Text } from 'react-native';
 import { IconButton } from 'react-native-paper';
+import songs from '../stubs/songs.json';
 
 function CurrentSong() {
   const [musicPlay, setMusicPlay] = React.useState(false);
+  const [currentSong, setCurrentSong] = React.useState(false);
   const musicBarIcon = musicPlay ? 'play' : 'pause';
+
+  React.useEffect(() => {
+    setCurrentSong(songs[Math.floor(Math.random() * songs.length)]);
+  }, []);
 
   return (
     <View style={playStyles.container}>
@@ -12,10 +18,12 @@ function CurrentSong() {
         <Image
           style={playStyles.thumbnail}
           source={{
-            uri: 'https://images.unsplash.com/photo-1599467556385-48b57868f038?q=80&w=3871&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            uri: currentSong.img,
           }}
         />
-        <Text style={playStyles.actorName}>Peter - Chill Beats</Text>
+        <Text style={playStyles.actorName}>
+          {currentSong.singer} - {currentSong.title}
+        </Text>
       </View>
       <IconButton icon={musicBarIcon} size={20} onPress={() => setMusicPlay(!musicPlay)} />
     </View>
@@ -28,7 +36,6 @@ const playStyles = StyleSheet.create({
     height: 50,
     position: 'absolute',
     bottom: 0,
-    zIndex: 10,
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
@@ -47,6 +54,7 @@ const playStyles = StyleSheet.create({
   },
   actorName: {
     fontWeight: '600',
+    maxWidth: '70%',
   },
 });
 
