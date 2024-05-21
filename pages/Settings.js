@@ -1,6 +1,6 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import { Appbar, Switch } from 'react-native-paper';
+import { ScrollView, StyleSheet, View } from 'react-native';
+import { Text, Appbar, Switch } from 'react-native-paper';
 import { Appearance } from 'react-native';
 
 function Settings() {

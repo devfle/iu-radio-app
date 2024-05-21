@@ -1,6 +1,6 @@
 import React from 'react';
-import { ScrollView, Text, StyleSheet } from 'react-native';
-import { TextInput, Button, Snackbar, Appbar } from 'react-native-paper';
+import { ScrollView, StyleSheet } from 'react-native';
+import { TextInput, Button, Snackbar, Appbar, Text } from 'react-native-paper';
 import { CurrentSong } from '../components';
 
 function SongWish() {

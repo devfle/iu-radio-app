@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { Text, View, ScrollView, StyleSheet } from 'react-native';
-import { Card, Snackbar, Appbar } from 'react-native-paper';
+import { View, ScrollView, StyleSheet } from 'react-native';
+import { Card, Snackbar, Appbar, Text } from 'react-native-paper';
 import { CurrentSong, Rating } from '../components';
 import { FeedbackModal } from '../components/FeedbackModal';
 import mods from '../stubs/mods.json';
