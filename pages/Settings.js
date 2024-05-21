@@ -1,9 +1,15 @@
 import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Appbar, Switch } from 'react-native-paper';
+import { Appearance } from 'react-native';
 
 function Settings() {
   const [isSwitchOn, setIsSwitchOn] = React.useState(false);
+
+  React.useEffect(() => {
+    Appearance.setColorScheme(isSwitchOn ? 'dark' : 'light');
+  }, [isSwitchOn]);
+
   const onToggleSwitch = () => setIsSwitchOn(!isSwitchOn);
   return (
     <>
@@ -17,7 +23,8 @@ function Settings() {
           <Switch value={isSwitchOn} onValueChange={onToggleSwitch} />
         </View>
         <View>
-          <Text>Copyright 2024 by FantasyFM</Text>
+          <Text>Version 1.0.0</Text>
+          <Text style={{ marginVertical: 8 }}>Copyright 2024 by FantasyFM</Text>
           <Text>Developed by Devfle</Text>
         </View>
       </ScrollView>
