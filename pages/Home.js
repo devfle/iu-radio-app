@@ -6,6 +6,7 @@ import { FeedbackModal } from '../components/FeedbackModal';
 import mods from '../stubs/mods.json';
 import playlist from '../stubs/playlist.json';
 import uuid from 'react-native-uuid';
+import { sendNotification } from '../utils/sendNotification';
 
 function Home() {
   const [showSnack, setShowSnack] = React.useState(false);
@@ -26,7 +27,7 @@ function Home() {
     setShowFeedback(false);
   };
 
-  const sendFeedback = () => {
+  const sendFeedback = async () => {
     setShowSnack(true);
     setShowFeedback(false);
     setFeedbackText('');
@@ -39,6 +40,8 @@ function Home() {
     };
 
     console.log('Feedback Data:', feedbackData);
+
+    await sendNotification(feedbackData);
 
     fetch('XY/feedback', {
       method: 'POST',
